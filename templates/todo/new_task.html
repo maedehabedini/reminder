@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="post" class=" form-control ">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add New Task</button>
+    </form>
+{% endblock content %}

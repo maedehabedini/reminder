@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load tasks_tags %}
+{% block content %}
+    <p>title: {{ task.title|capitalize_title }}</p>
+    <p>description: {{ task.description }}</p>
+    <p>date_of_creation:{{ task.date_of_creation }}</p>
+    <p>due_date :{{ task.due_date }}</p>
+    <p>category: </p>
+    {% for category in task.tasks.all %}
+        <p> {{category.name}} </p>
+    {% endfor %}
+    <p>is_done: {{ task.is_done }}</p>
+    <p>time to finish {% remain_time task.due_date %}</p>
+{% endblock content %}

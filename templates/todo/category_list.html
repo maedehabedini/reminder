@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h3>All Categories </h3>
+    <ul>
+        {% for category in object_list %}
+            <li>
+                <a href="{{category.get_absolute_url}}">{{category.name}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <h3>Empty categories </h3>
+    {% for category in empty %}
+        <ul>
+            <li>
+                {{ category.name }}
+            </li>
+        </ul>
+
+    {% endfor %}
+{% endblock content %}

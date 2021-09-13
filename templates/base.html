@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+           crossorigin="anonymous">
+    <title>Reminder</title>
+</head>
+<body>
+ <h2> ToDo Application </h2>
+    <ul class="list-group">
+        <a href="{% url 'admin:index' %}"><li class="list-group-item list-group-item-dark col-5">Admin</li> </a>
+  <a href="{% url 'category_list' %}" ><li class="list-group-item list-group-item-success col-5">Categories</li></a>
+  <a href="{% url 'task_list' %}"><li class="list-group-item list-group-item-warning col-5">Tasks</li></a>
+  <a href="{% url 'new_task' %}"><li class="list-group-item list-group-item-dark col-5">Add New Task</li></a>
+
+</ul>
+{% block content %}
+
+{% endblock content %}
+
+</body>
+</html>
